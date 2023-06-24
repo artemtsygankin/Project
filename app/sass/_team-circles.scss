@@ -1,0 +1,23 @@
+.team-circles {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    width: 90px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &__item {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $colorblue;
+        opacity: 0.2;
+    }
+    &__item:not(last-child) {
+        margin-right: 15px;
+    }
+    &__item:hover {
+        opacity: 0.6;
+    }
+}

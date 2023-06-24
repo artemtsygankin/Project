@@ -1,0 +1,45 @@
+.services {
+    padding-bottom: 30px;
+    &__head {
+        font-size: 30px;
+        line-height: 37px;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding-bottom: 30px;
+    }
+    &__link {
+        color: $colorblue;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        display: inline-flex;
+    }
+    &__link:hover {
+        color: $hover;
+        padding-right: 20px;
+    }
+    &__link::after {
+        content: "";
+        background-image: url(../images/Arrow.svg);
+        width: 12px;
+        height: 12px;
+        display: block;
+    }
+    @media (min-width: 768px) {
+        padding-bottom: 60px;
+        &__link {
+            margin-top: 60px;
+        }
+        &__head {
+            font-size: 38px;
+            line-height: 46px;
+            padding-bottom: 60px;
+        }
+    }
+}

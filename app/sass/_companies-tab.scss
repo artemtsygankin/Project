@@ -1,0 +1,58 @@
+.companies-tab {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 120px);
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item:nth-child(1) {
+        background-color: #1c4280;
+    }
+    &__item:nth-child(2) {
+        background-color: #143646;
+    }
+    &__item:nth-child(3) {
+        background: linear-gradient(0deg, #f48b30, #f48b30), #f48b30;
+    }
+    &__item:nth-child(4) {
+        background-color: #9e4dc3;
+    }
+    &__item:nth-child(5) {
+        background-color: #fd9339;
+    }
+    &__item:nth-child(6) {
+        background-color: #e2e2e4;
+    }
+    &__item:nth-child(n + 7) {
+        display: none;
+    }
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 120px);
+        &__item:nth-child(n + 7) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item:nth-child(7) {
+            background-color: #c71c36;
+        }
+        &__item:nth-child(8) {
+            background-color: #dcf3f9;
+        }
+        &__item:nth-child(9) {
+            background-color: #eaeaea;
+        }
+        &__item:nth-child(10) {
+            background-color: #282240;
+        }
+        &__item:nth-child(11) {
+            background-color: #1d4568;
+        }
+        &__item:nth-child(12) {
+            background-color: #000000;
+        }
+    }
+}

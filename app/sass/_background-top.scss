@@ -1,0 +1,38 @@
+.background-top {
+    background: url(../images/Symbol.svg) no-repeat center top,
+        linear-gradient(
+                228.57deg,
+                #323264 11.93%,
+                #323264 57.17%,
+                #643e72 87.46%
+            )
+            no-repeat;
+    border-radius: 0px 0px 12px 12px;
+    position: relative;
+    @media (min-width: 768px) {
+        background-size: 893px 1024px, cover;
+    }
+    @media (min-width: 992px) {
+        background-size: 670px 768px, cover;
+    }
+}
+.background-top::after {
+    content: "";
+    height: 10px;
+    background: #cacadb;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: -10px;
+}
+.background-top::before {
+    content: "";
+    height: 10px;
+    background: #e7e7f2;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: -20px;
+}

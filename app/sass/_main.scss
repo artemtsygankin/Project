@@ -1,0 +1,34 @@
+.main {
+    &__head {
+        font-size: 38px;
+        line-height: 46px;
+        text-align: center;
+        color: #ffffff;
+        padding: 129px 20px 159px 20px;
+        margin-left: 10px;
+    }
+    &__link {
+        text-align: center;
+    }
+    &__scroll {
+        margin-bottom: 60px;
+        display: inline-block;
+    }
+    &__scroll:hover circle,
+    &__scroll:hover path {
+        stroke: rgba(240, 20, 90, 1);
+        transition-duration: 1s;
+    }
+    @media (min-width: 768px) {
+        &__head {
+            padding-top: 274px;
+            padding-bottom: 417px;
+        }
+    }
+    @media (min-width: 992px) {
+        &__head {
+            padding-top: 225px;
+            padding-bottom: 289px;
+        }
+    }
+}

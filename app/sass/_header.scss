@@ -1,0 +1,249 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content;
+    position: relative;
+
+    &__top {
+        grid-column: 1 / 3;
+        display: flex;
+        justify-content: space-between;
+        background: rgba(245, 245, 250, 0.2);
+        margin: 0 -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &__lang {
+        display: flex;
+        padding-left: 0;
+        list-style: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    &__tel {
+        align-self: center;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__list button {
+        margin-right: 14px;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #ffffff;
+        background-color: transparent;
+        border: 0;
+        font-family: "Montserrat", "Arial", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    &__burger {
+        background-image: url(../images/HamburgerHome.svg);
+        width: 32px;
+        height: 33px;
+        background-color: transparent;
+        border: 0;
+        margin-top: 13px;
+    }
+    &__burger.close {
+        background-image: url(../images/Close.svg);
+        background-color: #ffffff;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+    }
+
+    &__address,
+    &__fb {
+        display: none;
+    }
+    &__pages {
+        display: none;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 100px;
+        list-style: none;
+        padding-left: 0;
+        text-decoration: none;
+        height: calc(100vh - 100px);
+        overflow: auto;
+        padding: 12px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        li {
+            text-align: center;
+            background-color: $greybg;
+            border-radius: 12px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            a {
+                text-decoration: none;
+                font-size: 24px;
+                line-height: 29px;
+                color: $colorblue;
+            }
+        }
+        li:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    &__pages::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    &__pages a:hover {
+        color: $hover;
+    }
+    &__pages li:hover {
+        background-color: #e6e6f0;
+        cursor: pointer;
+    }
+
+    &__pages.active {
+        display: block;
+    }
+
+    &__logo {
+        padding-top: 15px;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        &__top {
+            justify-content: start;
+            align-items: center;
+            background: transparent;
+            padding-top: 52px;
+        }
+        &__address::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #e6e6f0;
+            margin-bottom: 3px;
+            margin-right: 6px;
+            display: inline-block;
+        }
+        &__lang {
+            padding: 0;
+        }
+        &__tel::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #e6e6f0;
+            margin-bottom: 3px;
+            margin-right: 6px;
+            display: inline-block;
+        }
+        &__tel::after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #e6e6f0;
+            margin-bottom: 3px;
+            margin-right: 6px;
+            margin-left: 6px;
+            display: inline-block;
+        }
+        &__fb {
+            display: block;
+        }
+        &__fb:hover path {
+            fill: $accent;
+        }
+        &__address {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: right;
+            color: #ffffff;
+            display: block;
+            margin-right: 6px;
+        }
+        &__logo svg {
+            width: 130px;
+            height: 60px;
+            display: block;
+        }
+        &__burger {
+            display: none;
+        }
+        &__pages li:hover {
+            background-color: transparent;
+        }
+        &__pages {
+            position: static;
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+            height: 30px;
+            overflow: hidden;
+
+            li {
+                height: 30px;
+                padding: 0;
+                background-color: transparent;
+                a {
+                    text-decoration: none;
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding-right: 15px;
+                    text-align: right;
+                    color: #ffffff;
+                }
+            }
+
+            a:hover {
+                text-decoration: underline;
+                background-color: transparent;
+                color: #ffffff;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: min-content min-content;
+        padding-top: 52px;
+        &__top {
+            grid-column: 2 / 3;
+            padding: 0;
+            justify-self: end;
+            margin: 0;
+        }
+        &__logo {
+            grid-row: 1 / 3;
+            align-self: center;
+            padding: 0;
+            align-self: self-start;
+            padding-top: 5px;
+        }
+        &__menu {
+            justify-self: end;
+        }
+        &__pages {
+            margin-top: 18px;
+            li {
+                a {
+                    padding-left: 15px;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

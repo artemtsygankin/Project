@@ -1,0 +1,37 @@
+.publications {
+    background-color: $greybg;
+    padding-top: 30px;
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $colorblue;
+        display: inline-flex;
+    }
+    &__link:hover {
+        color: $hover;
+    }
+    &__head {
+        font-size: 30px;
+        line-height: 37px;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding-top: 5px;
+        padding-bottom: 30px;
+    }
+    &__link::after {
+        content: "";
+        background-image: url(../images/Arrow.svg);
+        width: 12px;
+        height: 12px;
+    }
+    @media (min-width: 768px) {
+        &__head {
+            font-size: 38px;
+            line-height: 46px;
+            padding-top: 10px;
+        }
+    }
+}

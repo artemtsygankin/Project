@@ -1,0 +1,126 @@
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__address {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #323264;
+        padding-bottom: 10px;
+    }
+
+    &__map {
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $colorblue;
+        margin-bottom: 21px;
+    }
+    &__map:hover {
+        color: $hover;
+    }
+    &__fb {
+        margin-bottom: 10px;
+    }
+    &__fb:hover path {
+        fill: $accent;
+    }
+    &__tel {
+        font-size: 16px;
+        line-height: 20px;
+        color: #46466e;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+    &__mail {
+        font-size: 16px;
+        line-height: 20px;
+        color: $colorblue;
+        margin-bottom: 30px;
+        text-decoration: none;
+    }
+    &__mail:hover {
+        color: $accent;
+    }
+    &__copy {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $greytext;
+    }
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        &__top {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        &__end {
+            grid-column: 1 / 3;
+            display: flex;
+            flex-direction: row;
+        }
+        &__map {
+            margin: 0;
+        }
+        &__address {
+            padding: 0;
+        }
+        &__address::after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $greytext;
+            display: inline-block;
+            margin: 0 10px 3px 5px;
+        }
+        &__tel {
+            margin: 0;
+        }
+        &__tel::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            display: inline-block;
+            margin: 0 10px 3px 10px;
+            background-color: $greytext;
+            border-radius: 50%;
+        }
+        &__tel::after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            display: inline-block;
+            margin: 0 10px 3px 10px;
+            background-color: $greytext;
+            border-radius: 50%;
+        }
+        &__fb {
+            margin: 0;
+        }
+        &__mail {
+            margin: 0;
+        }
+        &__copy {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            text-align: end;
+        }
+    }
+}

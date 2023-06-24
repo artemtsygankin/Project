@@ -1,0 +1,85 @@
+.team-content {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 0;
+
+    &__inside {
+        background-color: $greybg;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 0 0 12px 12px;
+    }
+    &__img {
+        height: 500px;
+        object-fit: cover;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 12px 12px 0 0;
+    }
+    &__link {
+        color: $colorblue;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        display: inline-flex;
+        padding-top: 30px;
+        padding-bottom: 5px;
+    }
+    &__link:hover {
+        color: $hover;
+    }
+    &__link::after {
+        content: "";
+        background-image: url(../images/Arrow.svg);
+        width: 12px;
+        height: 12px;
+    }
+    &__head {
+        font-size: 30px;
+        line-height: 37px;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding-bottom: 30px;
+    }
+    &__name {
+        font-size: 16px;
+        line-height: 20px;
+        color: #b3b3ba;
+        width: 60%;
+        padding-bottom: 6px;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #b3b3ba;
+        padding-bottom: 30px;
+    }
+    @media (min-width: 768px) {
+        margin-top: 80px;
+
+        &__head {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+    @media (min-width: 992px) {
+        display: flex;
+        &__img {
+            margin-top: 0;
+            border-radius: 12px 0 0 12px;
+            width: 400px;
+            height: auto;
+        }
+        &__name {
+            width: 100%;
+        }
+        &__inside {
+            border-radius: 0 12px 12px 0;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.about-us {
+    &__top {
+        margin-bottom: 30px;
+    }
+    &__head {
+        font-size: 30px;
+        line-height: 37px;
+        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        margin-top: 30px;
+        margin-bottom: 28px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 30px;
+        color: #000000;
+    }
+    &__end {
+        padding-left: 30px;
+        border-left: 4px solid #e6e6f0;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    &__content {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #323264;
+        margin-top: 10px;
+    }
+    &__text1 {
+        font-size: 36px;
+        line-height: 44px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    &__text1::before {
+        content: "";
+        background-image: url(../images/Experience.svg);
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        margin-right: 12px;
+    }
+    &__text2 {
+        font-size: 36px;
+        line-height: 44px;
+
+        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    &__text2::before {
+        content: "";
+        background-image: url(../images/Clients.svg);
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        margin-right: 12px;
+    }
+    &__text3 {
+        font-size: 36px;
+        line-height: 44px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    &__text3::before {
+        content: "";
+        background-image: url(../images/Probono.svg);
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        margin-right: 12px;
+        margin-bottom: 5px;
+    }
+}

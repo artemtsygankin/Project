@@ -1,0 +1,53 @@
+.achievements {
+    background-color: $greybg;
+    &__head {
+        text-align: center;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #323264;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__box {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &__item {
+        background-color: white;
+        border-radius: 12px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item:nth-child(n + 2) {
+        display: none;
+    }
+    &__scroll {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #e6e6f0;
+    }
+    &__scroll-list {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+    }
+    &__scroll-item {
+        width: 16px;
+        height: 16px;
+        background-color: $colorblue;
+        opacity: 0.2;
+        border-radius: 50%;
+        list-style: none;
+        padding-left: 0;
+        margin-right: 14px;
+        cursor: pointer;
+    }
+    &__scroll-item:hover {
+        opacity: 1;
+    }
+}
