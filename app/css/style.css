@@ -732,6 +732,11 @@ button {
   opacity: 0.6;
 }
 
+.team-circles::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .companies__head {
   font-size: 14px;
   line-height: 17px;
